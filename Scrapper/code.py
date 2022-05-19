@@ -23,7 +23,7 @@ def string_for_csv(data, salary = False):
         return str(data).replace(',', '.')
 
 #going to a page with job groups and scanning it
-link_positions = ''.join([link, '/praca/zoznam-pozicii/']) #the link to webpage with groups of jobs
+link_positions = ''.join([link, '/en/work/list-of-positions/']) #the link to webpage with groups of jobs
 page_positions = re.get(link_positions) #getting the webpage
 soup_positions = BS(page_positions.text, 'lxml') #parsing the webpage
 job_pos_list = soup_positions.find('ul', class_ = "list-reset") #finding a list of job groups
